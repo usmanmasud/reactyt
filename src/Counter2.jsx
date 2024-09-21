@@ -1,7 +1,7 @@
 import { useState, useReducer } from "react";
 
 export default function Counter2() {
-    const [state, dispatch] = useReducer(reducer, { count: 1 })
+    const [state, dispatch] = useReducer(reducer, { count: 1, incrementby: 1 })
     function reducer(state, action) {
         if (action.type == "increment") {
             return state + action.playload
