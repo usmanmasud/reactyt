@@ -5,6 +5,7 @@ import NotFound from "./components/pages/Notfount"
 import Nav from "./components/pages/Nav"
 import Profile from "./components/pages/Profile"
 import Settings from "./components/pages/Ssettings"
+import Products from "./components/pages/Products"
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
         <Nav />
         <Routes>
           <Route path="/" element={<Homepage />} />
+          <Route path="/products/:id" element={<Products />} />
           <Route path="/dashboard" element={<Dashborad />}>
             <Route path="profile" element={<Profile />} />
             <Route path="settings" element={<Settings />} />
