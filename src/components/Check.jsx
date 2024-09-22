@@ -1,3 +1,8 @@
+import { useContext } from "react"
+import { userContext } from "../context/UserContext"
 export default function Check() {
-    return <div>Check</div>
+    const { user } = useContext(userContext)
+    return <div>
+
+        Check {user}</div>
 }

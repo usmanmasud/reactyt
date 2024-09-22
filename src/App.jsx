@@ -7,18 +7,20 @@
 // import Settings from "./components/pages/Ssettings"
 // import Products from "./components/pages/Products"
 
-import { createContext } from "react"
+import { createContext, useState } from "react"
 import Check from "./components/Check"
+import Login from "./components/Login";
+import { UserProvider } from "./context/UserContext";
+
 
 export default function App() {
-  const userContext = createContext()
 
   return (
     <div>
-      <userContext.Provider value="guest" >
+      <UserProvider>
+        <Login />
         <Check />
-      </userContext.Provider>
-
+      </UserProvider>
 
       {/* <BrowserRouter>
         <Nav />
